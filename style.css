@@ -1,82 +1,187 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+:root {
+  --primary-color: #4CAF50;
+  --secondary-color: #f1f1f1;
+  --text-color: #333;
+  --button-color: #008CBA;
+  --button-text-color: #fff;
+}
+
+/* Reset some default styles */
+body, h1, p, ul, li, a {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+}
+
 body {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: "Lato", sans-serif;
-    font-size: 18px;
+  font-family: Arial, sans-serif;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
 }
 
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 10px 90px;
+  background-color: var(--primary-color);
+  padding: 10px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#menulist li a{
+header .logo p {
+  color: var(--button-text-color);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+header .menu img {
+  display: none;
+  cursor: pointer;
+}
+
+header .menu ul {
+  list-style-type: none;
+  display: inline;
+  margin: 0 10px;
+}
+
+header .menu a {
   text-decoration: none;
-  color: black;
+  color: var(--color-light-blue);
+  font-weight: bold;
+}
+
+header .menu a:hover {
+  color: var(--color-hover-blue);
+}
+
+.herosection {
+  background-color: black;
+  color: var(--button-text-color);
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0px 100px;
+}
+
+.wishes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 70px;
+}
+
+.wishbox {
+  background-color: var(--button-text-color);
+  color: var(--text-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.wishbox img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.wishbox .title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.wishbox .description {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.wishbox button {
+  background-color: var(--button-color);
+  color: var(--button-text-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.wishbox button:hover {
+  background-color: #007B9E;
+  transition: background-color 0.3s ease;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    /* CSS rules for extra small devices */
-
+footer {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 20px 60px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
 }
-  /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-    /* CSS rules for small devices */
 
+footer a {
+  color: var(--text-color);
+  text-decoration: none;
+  margin: 0 10px;
 }
-  /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    /* CSS rules for medium devices */
 
+footer a:hover {
+  color: var(--color-lightest-blue);
 }
-  /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    /* CSS rules for large devices */
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header {
+    padding: 10px 20px;
+  }
+  
+  header .menu img {
+    display: block;
+    height: 35px;
+  }
+
+  header .menu menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    background-color: var(--primary-color);
+    z-index: 1000;
+    width: 100%;
+  }
+
+  header .menu ul {
+    display: block;
+    margin: 30px;
+    text-align: left;
+  }
+
+  header .menu.active menu {
+    display: block;
+  }
+  .wishes {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 70px;
+  }
+  footer {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
-  /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    /* CSS rules for extra large devices */
 
+
+@media (min-width: 767px) and (max-width: 900px)  {
+  .wishes {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 70px;
+  }
 }
