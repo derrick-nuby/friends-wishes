@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 90px;
+}
+
+#menulist li a{
+  text-decoration: none;
+  color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    /* CSS rules for extra small devices */
+
+}
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    /* CSS rules for small devices */
+
+}
+  /* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    /* CSS rules for medium devices */
+
+}
+  /* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    /* CSS rules for large devices */
+
+}
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    /* CSS rules for extra large devices */
+
+}
